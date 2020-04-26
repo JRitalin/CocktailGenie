@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Cocktail Genie</string>
+    <string name="home_title">Cocktail Genie</string>
+    <string name="splash_title">Welcome to Cocktail Genie!</string>
+</resources>
