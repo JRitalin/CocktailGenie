@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 Intent homeIntent = new Intent (MainActivity.this,HomeActivity.class);
                 startActivity(homeIntent);
+                overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
                 finish();
             }
         },SPLASH_TIME_OUT);
