@@ -7,7 +7,6 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -23,7 +22,6 @@ public class LoginScreen extends AppCompatActivity implements View.OnClickListen
             emailSignInButton,
             emailCreateAccountButton;
 
-
     public EditText
             fieldEmail,
             fieldPassword;
@@ -37,7 +35,7 @@ public class LoginScreen extends AppCompatActivity implements View.OnClickListen
         setContentView(R.layout.login_screen);
 
         fieldEmail = findViewById(R.id.fieldEmail);
-        fieldPassword=findViewById(R.id.fieldPassword);
+        fieldPassword = findViewById(R.id.fieldPassword);
 
         // Buttons
         emailSignInButton = findViewById(R.id.emailSignInButton);
@@ -51,7 +49,7 @@ public class LoginScreen extends AppCompatActivity implements View.OnClickListen
 
         if (mAuth.getCurrentUser() != null) {
             finish();
-            startActivity(new Intent(getApplicationContext(), Home.class));
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
         }
     }
 
@@ -103,7 +101,7 @@ public class LoginScreen extends AppCompatActivity implements View.OnClickListen
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
                         finish();
-                        startActivity(new Intent(getApplicationContext(), Home.class));
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
                     }
 
                 });

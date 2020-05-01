@@ -4,4 +4,9 @@
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
 
+    <color name="bottomBarIconActive">#ff00f7</color>
+    <color name="bottomBarIconTextActive">#00fbff</color>
+    <color name="bottomBarIconInactive">#9e0099</color>
+    <color name="bottomBarBackground">#212021</color>
+
 </resources>
