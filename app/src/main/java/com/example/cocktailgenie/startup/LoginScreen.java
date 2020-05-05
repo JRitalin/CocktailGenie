@@ -1,4 +1,4 @@
-package com.example.cocktailgenie;
+package com.example.cocktailgenie.startup;
 
 
 import android.content.Intent;
@@ -12,6 +12,8 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.cocktailgenie.MainActivity;
+import com.example.cocktailgenie.R;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginScreen extends AppCompatActivity implements View.OnClickListener {

@@ -29,4 +29,20 @@
     <string name="hello_blank_fragment2">Hello blank search fragment</string>
 
 
+
+
+    <!--test stuff-->
+    <string name="search_by_prompt">Search by:</string>
+
+    <string-array name="drink_search_arrays">
+        <item>Drink Name</item>
+        <item>Alcohol Type</item>
+        <item>List All By First Letter</item>
+        <item>France</item>
+        <item>Italy</item>
+        <item>Singapore</item>
+        <item>New Zealand</item>
+        <item>India</item>
+    </string-array>
+
 </resources>

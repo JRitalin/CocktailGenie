@@ -1,30 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/bottomBarIconInactive"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.cocktailgenie.HomeFragment">
+    tools:context="com.example.cocktailgenie.fragments.HomeFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="@dimen/activity_horizontal_margin"
             android:paddingTop="10dp"
-            android:text="Top Ten Beverages"
             android:textColor="@android:color/black"
-            android:textSize="16sp"
-            />
+            android:textSize="16sp" />
+
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/recycler_view"
             android:clipToPadding="false"
-            android:scrollbars="vertical"/>
+            android:scrollbars="vertical" />
 
     </LinearLayout>
 

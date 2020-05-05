@@ -1,10 +1,12 @@
-package com.example.cocktailgenie;
+package com.example.cocktailgenie.startup;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.example.cocktailgenie.R;
 
 public class WelcomeSplash extends AppCompatActivity {
     private static int SPLASH_TIME_OUT = 2500;//Milliseconds

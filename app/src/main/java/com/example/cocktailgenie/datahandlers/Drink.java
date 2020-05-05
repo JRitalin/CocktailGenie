@@ -1,6 +1,9 @@
-package com.example.cocktailgenie;
+package com.example.cocktailgenie.datahandlers;
+
 
 public class Drink {
+
+    //Start of variable initialization
     private String idDrink;
     private String strDrink;
     private String strCategory;
@@ -37,6 +40,8 @@ public class Drink {
     private String strMeasure13;
     private String strMeasure14;
     private String strMeasure15;
+    //end of variable initializations
+
 
     /**
      * No args constructor for use in serialization
@@ -44,98 +49,99 @@ public class Drink {
     public Drink() {
     }
 
-    public Drink(String strDrink, String strDrinkThumb) {
+/*    public Drink(String strDrink, String strDrinkThumb) {
         this.strDrink = strDrink;
         this.strDrinkThumb = strDrinkThumb;
+    }*/
+
+    /**
+     * @param idDrink         drink ID - String
+     * @param strDrink        Drink Name - String
+     * @param strCategory     Category of Drink - String
+     * @param strGlass        Glass Type  - String
+     * @param strDrinkThumb   Drink Thumbnail URL - String
+     * @param strInstructions English Instructions - String
+     * @param strIngredient1  Ingredient1 - String
+     * @param strIngredient2  Ingredient2 - String
+     * @param strIngredient3  Ingredient3 - String
+     * @param strIngredient4  Ingredient4 - String
+     * @param strIngredient5  Ingredient5 - String
+     * @param strIngredient6  Ingredient6 - String
+     * @param strIngredient7  Ingredient7 - String
+     * @param strIngredient8  Ingredient8 - String
+     * @param strIngredient9  Ingredient9 - String
+     * @param strIngredient10 Ingredient10 - String
+     * @param strIngredient11 Ingredient11 - String
+     * @param strIngredient12 Ingredient12 - String
+     * @param strIngredient13 Ingredient13 - String
+     * @param strIngredient14 Ingredient14 - String
+     * @param strIngredient15 Ingredient15 - String
+     * @param strMeasure1     Measurement1 - String
+     * @param strMeasure2     Measurement2 - String
+     * @param strMeasure3     Measurement3 - String
+     * @param strMeasure4     Measurement4 - String
+     * @param strMeasure5     Measurement5 - String
+     * @param strMeasure6     Measurement6 - String
+     * @param strMeasure7     Measurement7 - String
+     * @param strMeasure8     Measurement8 - String
+     * @param strMeasure9     Measurement9 - String
+     * @param strMeasure10    Measurement10 - String
+     * @param strMeasure11    Measurement11 - String
+     * @param strMeasure12    Measurement12 - String
+     * @param strMeasure13    Measurement13 - String
+     * @param strMeasure14    Measurement14 - String
+     * @param strMeasure15    Measurement15 - String
+     */
+    public Drink(String idDrink, String strDrink, String strCategory,
+                 String strGlass, String strInstructions, String strDrinkThumb,
+                 String strIngredient1, String strIngredient2, String strIngredient3,
+                 String strIngredient4, String strIngredient5, String strIngredient6,
+                 String strIngredient7, String strIngredient8, String strIngredient9,
+                 String strIngredient10, String strIngredient11, String strIngredient12,
+                 String strIngredient13, String strIngredient14, String strIngredient15,
+                 String strMeasure1, String strMeasure2, String strMeasure3, String strMeasure4,
+                 String strMeasure5, String strMeasure6, String strMeasure7, String strMeasure8,
+                 String strMeasure9, String strMeasure10, String strMeasure11, String strMeasure12,
+                 String strMeasure13, String strMeasure14, String strMeasure15) {
+        super();
+        this.idDrink = idDrink;
+        this.strDrink = strDrink;
+        this.strCategory = strCategory;
+        this.strGlass = strGlass;
+        this.strInstructions = strInstructions;
+        this.strDrinkThumb = strDrinkThumb;
+        this.strIngredient1 = strIngredient1;
+        this.strIngredient2 = strIngredient2;
+        this.strIngredient3 = strIngredient3;
+        this.strIngredient4 = strIngredient4;
+        this.strIngredient5 = strIngredient5;
+        this.strIngredient6 = strIngredient6;
+        this.strIngredient7 = strIngredient7;
+        this.strIngredient8 = strIngredient8;
+        this.strIngredient9 = strIngredient9;
+        this.strIngredient10 = strIngredient10;
+        this.strIngredient11 = strIngredient11;
+        this.strIngredient12 = strIngredient12;
+        this.strIngredient13 = strIngredient13;
+        this.strIngredient14 = strIngredient14;
+        this.strIngredient15 = strIngredient15;
+        this.strMeasure1 = strMeasure1;
+        this.strMeasure2 = strMeasure2;
+        this.strMeasure3 = strMeasure3;
+        this.strMeasure4 = strMeasure4;
+        this.strMeasure5 = strMeasure5;
+        this.strMeasure6 = strMeasure6;
+        this.strMeasure7 = strMeasure7;
+        this.strMeasure8 = strMeasure8;
+        this.strMeasure9 = strMeasure9;
+        this.strMeasure10 = strMeasure10;
+        this.strMeasure11 = strMeasure11;
+        this.strMeasure12 = strMeasure12;
+        this.strMeasure13 = strMeasure13;
+        this.strMeasure14 = strMeasure14;
+        this.strMeasure15 = strMeasure15;
     }
 
-//    /**
-//     * @param strIngredient10
-//     * @param strDrink
-//     * @param strIngredient12
-//     * @param strIngredient11
-//     * @param strIngredient14
-//     * @param strCategory
-//     * @param strIngredient13
-//     * @param strGlass
-//     * @param strIngredient15
-//     * @param strMeasure12
-//     * @param strMeasure13
-//     * @param strMeasure10
-//     * @param strMeasure11
-//     * @param strInstructions
-//     * @param strIngredient1
-//     * @param strIngredient3
-//     * @param strDrinkThumb
-//     * @param strIngredient2
-//     * @param strIngredient5
-//     * @param strMeasure9
-//     * @param strIngredient4
-//     * @param strIngredient7
-//     * @param strMeasure7
-//     * @param strIngredient6
-//     * @param strMeasure8
-//     * @param strIngredient9
-//     * @param strMeasure5
-//     * @param strIngredient8
-//     * @param strMeasure6
-//     * @param strMeasure3
-//     * @param strMeasure4
-//     * @param strMeasure1
-//     * @param idDrink
-//     * @param strMeasure2
-//     * @param strMeasure14
-//     * @param strMeasure15
-//     */
-//    public Drink(String idDrink, String strDrink, String strCategory,
-//                 String strGlass, String strInstructions, String strDrinkThumb,
-//                 String strIngredient1, String strIngredient2, String strIngredient3,
-//                 String strIngredient4, String strIngredient5, String strIngredient6,
-//                 String strIngredient7, String strIngredient8, String strIngredient9,
-//                 String strIngredient10, String strIngredient11, String strIngredient12,
-//                 String strIngredient13, String strIngredient14, String strIngredient15,
-//                 String strMeasure1, String strMeasure2, String strMeasure3, String strMeasure4,
-//                 String strMeasure5, String strMeasure6, String strMeasure7, String strMeasure8,
-//                 String strMeasure9, String strMeasure10, String strMeasure11, String strMeasure12,
-//                 String strMeasure13, String strMeasure14, String strMeasure15) {
-//        super();
-//        this.idDrink = idDrink;
-//        this.strDrink = strDrink;
-//        this.strCategory = strCategory;
-//        this.strGlass = strGlass;
-//        this.strInstructions = strInstructions;
-//        this.strDrinkThumb = strDrinkThumb;
-//        this.strIngredient1 = strIngredient1;
-//        this.strIngredient2 = strIngredient2;
-//        this.strIngredient3 = strIngredient3;
-//        this.strIngredient4 = strIngredient4;
-//        this.strIngredient5 = strIngredient5;
-//        this.strIngredient6 = strIngredient6;
-//        this.strIngredient7 = strIngredient7;
-//        this.strIngredient8 = strIngredient8;
-//        this.strIngredient9 = strIngredient9;
-//        this.strIngredient10 = strIngredient10;
-//        this.strIngredient11 = strIngredient11;
-//        this.strIngredient12 = strIngredient12;
-//        this.strIngredient13 = strIngredient13;
-//        this.strIngredient14 = strIngredient14;
-//        this.strIngredient15 = strIngredient15;
-//        this.strMeasure1 = strMeasure1;
-//        this.strMeasure2 = strMeasure2;
-//        this.strMeasure3 = strMeasure3;
-//        this.strMeasure4 = strMeasure4;
-//        this.strMeasure5 = strMeasure5;
-//        this.strMeasure6 = strMeasure6;
-//        this.strMeasure7 = strMeasure7;
-//        this.strMeasure8 = strMeasure8;
-//        this.strMeasure9 = strMeasure9;
-//        this.strMeasure10 = strMeasure10;
-//        this.strMeasure11 = strMeasure11;
-//        this.strMeasure12 = strMeasure12;
-//        this.strMeasure13 = strMeasure13;
-//        this.strMeasure14 = strMeasure14;
-//        this.strMeasure15 = strMeasure15;
-//    }
     public String getIdDrink() {
         return idDrink;
     }
