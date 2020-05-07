@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                     loadFrag(frag);
                     return true;
                 case R.id.bottomNavigationSearchId:
-                    toolbar.setTitle("Settings");
+                    toolbar.setTitle("Search");
                     frag = new SearchFragment();
                     loadFrag(frag);
                     return true;

@@ -14,57 +14,72 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.cocktailgenie.R;
-import com.example.cocktailgenie.fragments.HomeFragment;
+import com.example.cocktailgenie.fragments.CardFragment;
 
 import java.util.ArrayList;
 
-public class DrinkAdapter extends RecyclerView.Adapter<DrinkAdapter.DrinkViewHolder> {
 
+//Adapter for Recycler View to allow recycler view
+public class DrinkAdapter extends RecyclerView.Adapter<DrinkAdapter.ViewHolder> {
+
+//variables
     private Context ctx;
     private ArrayList<Drink> drinks;
 
 
+//constructor
     public DrinkAdapter(Context context, ArrayList<Drink> drinks) {
         this.ctx = context;
         this.drinks = drinks;
     }
 
+    //viewholder creation
     @NonNull
     @Override
-    public DrinkAdapter.DrinkViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.drink_card,
                 parent, false);
-        return new DrinkViewHolder(view);
+        return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull DrinkAdapter.DrinkViewHolder holder, int position) {
-        final Drink drinks1 = drinks.get(position);
+    public void onBindViewHolder(@NonNull DrinkAdapter.ViewHolder holder, int position) {
+
+        Drink drinks1 = drinks.get(position);
+
         holder.drinkName.setText(drinks1.getStrDrink());
         String drinkURL = drinks1.getStrDrinkThumb();
         Glide.with(ctx).load(drinkURL).thumbnail(.5f).into(holder.drinkImg);
 
-        holder.drinkCard.setOnClickListener(v -> {
-            Intent intent = new Intent(ctx, HomeFragment.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            ctx.startActivity(intent);
+        //onclick listener for cards in viewholder
+        holder.drinkCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(ctx, CardFragment.class);
+                ctx.startActivity(intent);
+
+            }
         });
+
 
     }
 
+
+    //count of items in current viewholder
     @Override
     public int getItemCount() {
         return drinks.size();
     }
 
-    static class DrinkViewHolder extends RecyclerView.ViewHolder {
-
+    static class ViewHolder extends RecyclerView.ViewHolder {
+        //ViewHolder for recycler view
         TextView drinkName;
         ImageView drinkImg;
         LinearLayout drinkCard;
 
 
-        DrinkViewHolder(@NonNull View itemView) {
+        ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             drinkName = itemView.findViewById(R.id.drink_name);
@@ -73,5 +88,17 @@ public class DrinkAdapter extends RecyclerView.Adapter<DrinkAdapter.DrinkViewHol
         }
     }
 
+    static class DrinkPopViewHolder extends RecyclerView.ViewHolder {
+        //ViewHolder for card popup
+        TextView drinkName;
+        ImageView drinkImg;
+
+
+        public DrinkPopViewHolder (View itemView){
+            super(itemView);
+
+        }
+
+    }
 
 }

@@ -40,14 +40,6 @@ public class HomeFragment extends Fragment {
         // Required Empty Constructor
     }
 
-/*    public static HomeFragment newInstance(String param1, String param2) {
-        HomeFragment frag = new HomeFragment();
-        Bundle args = new Bundle();
-        frag.setArguments(args);
-        return frag;
-    }*/
-
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,7 +49,7 @@ public class HomeFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         //This inflates the layout
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-        recyclerView = view.findViewById(R.id.recycler_view);
+        recyclerView = view.findViewById(R.id.home_recycler_view);
 
 
         drinkList = new ArrayList<>();
@@ -75,6 +67,7 @@ public class HomeFragment extends Fragment {
         return view;
     }
 
+    //provides a random list of 10 items
     private void fetchHomeItems() {
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, URL, null,

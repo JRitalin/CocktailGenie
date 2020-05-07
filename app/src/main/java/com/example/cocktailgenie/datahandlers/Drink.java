@@ -1,6 +1,6 @@
 package com.example.cocktailgenie.datahandlers;
 
-
+//This holds all the data parsed from the API
 public class Drink {
 
     //Start of variable initialization
